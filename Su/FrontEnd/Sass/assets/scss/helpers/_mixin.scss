@@ -1,0 +1,6 @@
+
+// @mixin: tương tự hàm bên js nhưng ko có xử lí
+@mixin mText($fs: $text-base, $fw: $fw-normal){
+    font-size: $fs;
+    font-weight: $fw;
+}

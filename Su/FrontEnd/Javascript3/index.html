@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="min-h-screen flex items-center justify-center bg-gray-100">
+        <div class="bg-white p-8 rounded-2xl shadow-md w-full max-w-md">
+          <h2 class="text-2xl font-bold mb-6 text-center">Kiểm tra học sinh</h2>
+  
+          <form class="space-y-4">
+            <!-- Họ tên -->
+            <div>
+              <label class="block text-gray-700 font-medium mb-1"
+                >Lương</label
+              >
+              <input
+                id="luong"
+                name="name"
+                class="w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                placeholder="nhập mức lương..."
+              />
+            </div>
+            <!-- Họ tên -->
+            <div>
+              <label class="block text-gray-700 font-medium mb-1">Số Ngày</label>
+              <input
+                type="number"
+                id="songay"
+                name="score"
+                class="w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                placeholder="Nhập số ngày...."
+              />
+            </div>
+  
+            <!-- Nút gửi -->
+            <div>
+              <button
+                type="number"
+                class="w-full bg-blue-500 text-white p-3 rounded-lg hover:bg-blue-600 transition-colors"
+                id="mucluong"
+              >
+                mức lương
+              </button>
+            </div>
+  
+            <!-- In dữ liệu  -->
+            <div id="inra"></div>
+          </form>
+        </div>
+      </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<script src="./main.js"></script>
+
+</html>

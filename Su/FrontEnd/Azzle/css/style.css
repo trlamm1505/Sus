@@ -1,0 +1,68 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+.group {
+  position: relative;  /* Đảm bảo phần tử nhóm có vị trí */
+  z-index: 20; /* Đặt z-index cao để menu không bị che khuất */
+}
+
+.group > .absolute {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+
+.group > .absolute {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.group:hover > .absolute {
+  opacity: 1;
+  visibility: visible;
+}
+
+.show-on-scroll {
+  opacity: 1 !important;
+  pointer-events: auto; /* Cho hover lại sau khi hiện ra */
+}
+.zoom-in-image {
+  transform: scale(0.8); /* Khởi tạo ảnh nhỏ */
+  opacity: 0; /* Ảnh ban đầu ẩn */
+  visibility: hidden; /* Đảm bảo ảnh không hiển thị khi chưa vào tầm nhìn */
+  transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out; /* Tăng thời gian chuyển động để làm chậm hiệu ứng */
+}
+
+.zoom-in-image.zoom-in-active {
+  visibility: visible; /* Làm ảnh hiển thị khi vào tầm nhìn */
+  transform: scale(1); /* Ảnh phóng to khi vào tầm nhìn */
+  opacity: 1; /* Ảnh rõ ràng */
+}
+@media (max-width: 991px) {
+  /* Ẩn menu khi màn hình dưới 991px */
+  #navbar-multi-level {
+    display: none !important;
+  }
+
+  /* Hiển thị menu toggle (nút 3 gạch) */
+  #menu-toggle {
+    display: block !important;
+  }
+}
+
+@media (min-width: 992px) {
+  /* Hiển thị menu khi màn hình rộng hơn hoặc bằng 992px */
+  #navbar-multi-level {
+    display: flex !important;
+  }
+
+  /* Ẩn nút toggle */
+  #menu-toggle {
+    display: none !important;
+  }
+}
+
+

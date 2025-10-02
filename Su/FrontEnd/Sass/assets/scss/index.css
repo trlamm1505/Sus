@@ -1,0 +1,32 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.header {
+  background-color: #f8f9fa;
+}
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+.header .container .logo a {
+  text-decoration: none;
+  font-size: 30px;
+  color: #2a73dd;
+  font-weight: 700;
+}
+.header .container .menu a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+  color: #2a73dd;
+}/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,25 @@
+.header{
+    background-color: $primary-100;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+        .logo{
+            a{
+                text-decoration: none;
+                font-size: $text-3xl;
+                color:$text-primary-300 ;
+                font-weight: $fw-bold;
+            }
+        }
+        .menu{
+            a{
+                text-decoration: none;
+                font-size: $text-2xl;
+                font-weight: $fw-normal;
+                color:$text-primary-300
+            }
+        }
+    }
+}

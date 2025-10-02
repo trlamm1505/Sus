@@ -1,0 +1,174 @@
+@767 enter(max-width)
+// LINK EM YÊU VÀO PAGE: Nhớ tạo file css trước rồi, link theo đúng tên file đã tạo nhé
+Link CSS: <link rel="stylesheet" href="css/name_file.css">
+Link JS: <script defer src="js/name_file.js"></script>
+// Là khi gặp hình ảnh, mún chỉnh border hay gì gì đó, thì CSS trên chính thẻ img của class div đó, đừng css trên div là ok
+
+// Ẩn thanh ngang: overflow-x: hidden;
+// header: display: flex : Nó giúp ra lệnh cho con cái nhà nó thẳng theo hàng ngang -> justify-content: space-between // Trong display flex có justi nhé
+
+		+ item:	gap: ... px // Khoảng cách từng cháu item
+			text-decoration: none
+		+ Căn giữa 1 chữ: text-align: center
+- Các loại justify-content: space-between,space-evenly,space-around / start,center,end
+background-color : -- Màu nền // color : -- Màu chữ
+float: left 
+font-weight: bold // đôi khi cần độ đậm nhạt của chữ nữa
+font-size,style,family
+border: 1px solid màu (viền)
+Kích Thước ảnh:
+width:
+heigth:
+border-radius: ..px // Bo góc ảnh 
+align-items: center; // Các item xếp theo vị trí center theo trục dọc
+// nav-bar : Luôn luôn là 1 cái list 
+display: flex => Cho các item thành 1 hàng ngang
+Nhiệm vụ của chúng ta: là ẩn 
+list-style: none (Giúp ẩn dấu chấm đen)
+text-decoration: none(Giúp ẩn cái gạch chân của thẻ a)
+color: ... (Để đổi màu chữ)
+background-color: ... (Đổi màu nền)
+margin, padding : Cân chỉnh sao cho giống đề nhất
+justify-content: around,between, center //Căn chỉnh các item theo chiều ngang
+// body:
+font-size/weight: px/number
+text-transform: uppercase
+display: inline-block/flex
+opacity: 0.5 // Mờ
+border-radius: ..px // Bo góc ảnh 
+td: first-child
+text-align: center // Căn giữa chữ
+text-decoration: none //Bỏ dấu gạch chân bên dưới
+list-style: none // bỏ dấu chấm của list
+border: 1px solid black
+justify-content: space-between/arround : Ngắn cách đều các item ko tính lề/tính lề
+box-shadow: x y color 
+align-items: center
+text-align: justify => Căn đều chữ 
+line-height:
+margin : 0px auto -> ra giữa 1 block div bất kì
+Quy ước: Dọc : Pixel // height
+	Ngang: % // width
+// HTML FORM
+.div
+	.div.CONTENT
+	<form>
+		.div.input: HTML : 
+				Box để chọn
+				<select name="" id="">
+					<option value  =""></option>
+				</select>
+				Box nhập info:
+				<label for="#"> Content </label>
+				<input type="..." id="..." placeholder="name"> 
+				// placeholder sẽ hiện name trong ô input
+				// Các type hay dùng trong input: text,password,date,submit,reset
+	<form>
+
+// Lưu ý: Có 1 trường hợp cha đang display flex => con bị ảnh hưởng kh qua được lề phải như mong muốn
+=> cho con : flex : 1; text-align: left => là bú
+// Button: <button type="button" onclick="name_func"></button> // Khi nào bài yêu cầu có JS thì dùng
+outline: none
+border: none
+padding: 1px
+color: 
+background-color:
+boder-radius: px // Bo tròn
+cursor: pointer 
+
+reponsive:
+max-width: 100% 
+overflow: hidden  // Khi đối tương con vượt quá kích thích => Ẩn con
+
+
+JS hay dùng:
+
+var header = document.getElementById("name_atri")
+					.value : lấy giá trị của trường đó
+					.checked: lấy giá trị là ô check
+					.src: Lấy địa chỉ ảnh
+.querySelector
+header.onclick Lấy sự kiện click
+-> Két hợp với hàm 
+header.onclick = function(){
+// Đoạn code trong này sẽ đc chạy nếu bạn click vào header
+}
+header.clientHeight : lấy chiều cao của header
+header.style.height = 'auto' // Sửa chiều cao thành auto
+.innerHTML === "Value"
+.style.display ... : Thay đổi style của HTML, theo attribute display
+alert('Thong bao'): Hiện ra thông báo
+confirm("Thong bao"): Dua ra thong bao kem YES/NO, có thể dungf biến var để lấy giá trị của nó
+var c = confirm("TB")
+Ép kiểu text thành Number Number(name_variable)
+nhảy vô thẻ cha : .parentElement
+Lấy các phần từ đã được tích 
+checkedItems.forEach((item) -> {
+const itemName = item.parentElement.querySelector("label").innerText;
+total += Number(item.value);
+menulistCartContent.InnerHTML += `<div class="menu-list_item.name"><div><label>${itemName}</label></div>`;
+});
+.selectedIndex : lấy phần tử đang được select trong thẻ sêlect
+Template : `${name_variable}`
+
+.addEventListener("click", () => {
+  /*Activity Code*/
+})
+** click (button), change (select)
+
+.addEventListener("click", myFunction);
+
+// Boostrap:
+Xếp bộ cục các item theo boostrap: col-md-number
+Công thức tính number = 12/x (x là số item muốn chung 1 hàng)
+VD: Có 4 item muốn chung 1 hàng => number = 12/4 = 3 => thêm class là col-md-3 vào mỗi div của item 
+ // position hay gặp : div con chồng div cha: cha : relative -> con: absolute
+Nhớ left right botton sao cho chuẩn, tràn ra cha thì cứ mặc định là 0
+
+
+Reponsive
+@media not|only mediatype and (mediafeature and|or|not mediafeature) {
+	CSS-Code;
+}
+
+2. Mediatypes:
+- print
+- screen
+- speech
+- all 
+- default
+
+3. Media Features:
+- min-width
+- max-width
+
+...
+
+Max-width:1024 : <= 1024
+Min width: 1024 : >=1024
+
+Đe hay ra mobile:
+Mobile: <= 739px or max
+
+16px = 1em
+Nen thay the px la em trong media query
+
+
+
+
+
+---- GIFT ----
+FORM ĐĂNG NHẬP
+<div class="form-group">
+      <label for="fullname" class="form-label">Tên đầy đủ</label>
+      <input id="fullname" name="fullname" type="text" placeholder="VD: Sơn Đặng" class="form-control">
+      <span class="form-message"></span>
+    </div>
+
+    <div class="form-group">
+      <label for="email" class="form-label">Email</label>
+      <input id="email" name="email" type="text" placeholder="VD: email@domain.com" class="form-control">
+      <span class="form-message"></span>
+    </div>
+
+    <div class="form-group">
